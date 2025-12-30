@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title> لعيون الدفعه</title>
+    <meta name="description" content="رسائل تحفيزية خاصة لطلاب تقنية المعلومات - جميع الحقوق محفوظة لـ FOX">
+    <meta name="copyright" content="FOX">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- حماية FOX - لا تقم بإزالة أي جزء من الكود -->
+    <!-- حقوق الملكية الفكرية محفوظة لـ FOX © 2025 -->
+    
+    <style>
+        /* 
+          FOX CSS Framework v1.0
+          Copyright © 2025 FOX. All rights reserved.
+          Protected by FOX Digital Security System
+        */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #0f3460 50%, #16213e 100%);
+            color: #ffffff;
+            font-family: 'Cairo', sans-serif;
+            text-align: center;
+            padding: 20px;
+            min-height: 100vh;
+            margin: 0;
+            direction: rtl;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* علامة مائية FOX */
+        .fox-watermark {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: rgba(0, 150, 255, 0.1);
+            font-size: 14px;
+            font-weight: bold;
+            z-index: -1;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 
+                0 0 40px rgba(0, 150, 255, 0.2),
+                0 15px 50px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            animation: slideIn 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(0, 150, 255, 0.05) 50%,
+                transparent 70%
+            );
+            animation: shine 8s infinite linear;
+            z-index: -1;
+        }
+
+        .header {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(0, 150, 255, 0.3);
+        }
+
+        .glow-text {
+            background: linear-gradient(45deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 36px;
+            font-weight: 800;
+            margin: 0;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .subtitle {
+            color: #66ccff;
+            font-size: 18px;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .input-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0, 150, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        select, input {
+            padding: 18px;
+            width: 90%;
+            max-width: 350px;
+            margin-top: 15px;
+            border-radius: 15px;
+            border: 2px solid rgba(0, 150, 255, 0.3);
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Cairo', sans-serif;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        select option {
+            background: #0a0a0a;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 18px 40px;
+            background: linear-gradient(45deg, #0066ff, #00d4ff);
+            border: none;
+            border-radius: 15px;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 102, 255, 0.4);
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 102, 255, 0.6);
+        }
+
+        button:hover::before {
+            left: 100%;
+        }
+
+        button:active {
+            transform: translateY(-2px);
+        }
+
+        .motivational-message {
+            margin-top: 40px;
+            padding: 30px;
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(45deg, rgba(0, 150, 255, 0.15), rgba(0, 212, 255, 0.15));
+            border-radius: 20px;
+            border: 2px solid rgba(0, 150, 255, 0.3);
+            animation: fadeInUp 0.8s ease forwards, float 4s ease-in-out infinite;
+            opacity: 0;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(0, 150, 255, 0.3);
+            color: #66ccff;
+            font-size: 16px;
+        }
+
+        .warning {
+            color: #ff6666;
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: rgba(0, 150, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin: 10px;
+            font-size: 14px;
+            color: #66ccff;
+            border: 1px solid rgba(0, 150, 255, 0.3);
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes shine {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.8); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                margin: 20px;
+                max-width: 90%;
+            }
+            
+            .glow-text {
+                font-size: 28px;
+            }
+            
+            .motivational-message {
+                font-size: 22px;
+                padding: 25px;
+                min-height: 120px;
+            }
+            
+            button {
+                padding: 16px 35px;
+                font-size: 18px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+            
+            .glow-text {
+                font-size: 24px;
+            }
+            
+            .motivational-message {
+                font-size: 20px;
+                padding: 20px;
+            }
+            
+            button {
+                padding: 14px 30px;
+                font-size: 16px;
+            }
+            
+            select, input {
+                padding: 15px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- حماية FOX - لا تقم بإزالة هذا التعليق -->
+    <div class="fox-watermark">FOX IT © 2025</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="glow-text">🚀 محفز طلاب تقنية المعلومات</h1>
+            <p class="subtitle">رسائل تحفيزية خاصة بمجال IT والتقنية</p>
+            <div style="margin-top: 20px;">
+                <span class="tech-badge">💻 برمجة</span>
+                <span class="tech-badge">🌐 ويب</span>
+                <span class="tech-badge">🔐 أمن</span>
+                <span class="tech-badge">🤖 ذكاء اصطناعي</span>
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <h2>👤 حدد نوعك</h2>
+            <select id="gender">
+                <option value="">-- اختر النوع --</option>
+                <option value="ذكر">🧑‍💻 طالب IT (ذكر)</option>
+                <option value="أنثى">👩‍💻 طالبة IT (أنثى)</option>
+            </select>
+        </div>
+
+        <div id="name-section" class="fade-in" style="display:none;">
+            <h2>✏️ اكتب اسمك</h2>
+            <input type="text" id="username" placeholder="ادخل اسمك هنا..." maxlength="30">
+            <button id="show-message-btn">🎯 احصل على رسالتك التحفيزية</button>
+            <p style="color: #88ddff; margin-top: 15px; font-size: 14px;">
+                سيتم عرض رسالة تحفيزية عشوائية خاصة بمجال التقنية
+            </p>
+        </div>
+
+        <div id="message" class="motivational-message"></div>
+        
+        <!-- حقوق الملكية -->
+        <div class="copyright">
+            <p>🦊 <strong>FOX IT Motivator</strong> - خاص لطلاب تقنية المعلومات</p>
+            <p class="warning">⚡ جميع الحقوق محفوظة © 2025 - يُمنع النسخ أو التعديل</p>
+        </div>
+    </div>
+
+    <script>
+        /*
+          ============================================
+          FOX IT Motivational System v2.0
+          Copyright © 2025 FOX. All rights reserved.
+          ============================================
+          
+          ⚠️ نظام خاص لطلاب تقنية المعلومات
+          يُمنع النسخ أو التعديل دون إذن كتابي
+        */
+
+        // FOX IT System
+        const FOX = (function() {
+            'use strict';
+            
+            // Private variables
+            let isInitialized = false;
+            let attemptCount = 0;
+            const MAX_ATTEMPTS = 10;
+            
+            // نظام الرسائل لطلاب IT (ذكور فقط)
+            const maleITMessages = [
+                "💻 كل سطر كود تكتبه هو خطوة نحو بناء مستقبلك الرقمي!",
+                "🐛➡️✅ أنت مثل الـ Debugger الذكي، قادر على حل أي مشكلة تواجهك!",
+                "🚀 مهاراتك في البرمجة ستغير العالم، استمر في التعلم والتطوير!",
+                "🔧 أنت الـ Full Stack Developer لحياتك، قادر على بناء أي شيء تتخيله!",
+                "🎯 كل مشكلة تقابلك هي مجرد Bug في انتظار حلك الإبداعي!",
+                "⚡ أنت مستقبل التكنولوجيا، استعد لقيادة الثورة الرقمية!",
+                "☁️ عقلك مثل الـ Cloud، لا حدود لسعة تخزين معرفتك!",
+                "📈 أنت الـ Algorithm الأكثر كفاءة لحل معادلات النجاح!",
+                "❤️ شغفك بالتكنولوجيا هو أقوى لغة برمجة ستتعلمها!",
+                "💪 أنت الـ Firewall الذي يحمي أحلامك من أي هجوم!",
+                "⛓️ أنت الـ Blockchain الخاص بك، تبني سلسلة نجاح لا يمكن اختراقها!",
+                "🔑 مهاراتك هي الـ API Keys التي تفتح لك أبواب المستقبل!",
+                "📊 أنت الـ Data Scientist الذي يحلل الفرص ويستثمر فيها!",
+                "🔄 كل تحدٍ تقابله هو مجرد Pull Request في رحلة تطويرك!",
+                "🏗️ أنت الـ Cloud Architect الذي يصمم سماء نجاحك الخاصة!",
+                "⚖️ إصرارك هو الـ Load Balancer الذي يوزع التحديات ويتغلب عليها!",
+                "💾 ذاكرتك هي الـ RAM، نظفها من المشتتات وركز على الأهداف!",
+                "🎯 CTRL + S لحياتك: Save Progress بشكل مستمر!",
+                "🖥️ أنت أقوى من أي خطأ برمجي، استمر في المحاولة!",
+                "🌟 مهاراتك التقنية هي جواز سفرك لعالم الـ Silicon Valley!"
+            ];
+            
+            // نظام الرسائل لطالبات IT (إناث فقط)
+            const femaleITMessages = [
+                "🎨 أنتِ الـ Frontend Developer المبدعة، تصممين مستقبلك بألوان النجاح!",
+                "🗄️ عقلكِ مثل الـ Database، مليء بالحلول الذكية والفعالة!",
+                "✨ أنتِ الـ UI/UX Designer لحياتك، تصممين تجربة نجاح فريدة!",
+                "🌐 شغفكِ بالتكنولوجيا هو أقوى سيرفر يدعم طموحاتك!",
+                "🤖 أنتِ مثل الـ Machine Learning Model، تتعلمين من كل تجربة وتتطورين!",
+                "📱 مهاراتكِ التقنية هي أقوى Framework لبناء مستقبلك!",
+                "🏗️ أنتِ الـ Backend Developer القوية، تبنيين أساسات متينة لنجاحك!",
+                "💎 كل خط برمجي تكتبينه هو لبنة في صرح نجاحك!",
+                "🛡️ أنتِ الـ Cybersecurity Expert، تحمين أحلامك من أي تهديد!",
+                "🔗 إبداعكِ التقني هو الـ API الذي يربط بين الشغف والنجاح!",
+                "💻 كودكِ أنيق مثل syntax لغة Python، واضح وقوي!",
+                "🚀 أنتِ الـ DevOps Engineer التي تدمج بين الإبداع والتقنية!",
+                "🌈 مهاراتكِ مثل الـ Rainbow Table، فريدة ولا يمكن تكرارها!",
+                "🎯 أنتِ الـ Agile Developer، تتأقلمين مع كل التحديات بذكاء!",
+                "⚡ ذكاءكِ التقني مثل سرعة معالجة الـ Quantum Computer!",
+                "🌙 أنتِ الـ Night Coder التي تبني الإمبراطوريات الرقمية!",
+                "🎮 تفوقكِ في حل المشكلات مثل لعبة الـ Coding Challenge!",
+                "📚 معرفتكِ مثل الـ GitHub Repository، غنية ومتجددة دائماً!",
+                "💖 شغفكِ بالتقنية هو الـ Compiler الذي يحول الأفكار لواقع!",
+                "👑 أنتِ الـ Tech Queen، ملكة عالم التقنية والإبداع!"
+            ];
+            
+            // Helper functions
+            function getRandomMessage(gender) {
+                if (gender === "ذكر") {
+                    return maleITMessages[Math.floor(Math.random() * maleITMessages.length)];
+                } else if (gender === "أنثى") {
+                    return femaleITMessages[Math.floor(Math.random() * femaleITMessages.length)];
+                }
+                return "مرحباً! أنت رائع/رائعة في مجال التقنية!";
+            }
+            
+            function showAlert(message) {
+                const alertDiv = document.createElement('div');
+                alertDiv.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(45deg, #0066ff, #00d4ff);
+                    color: white;
+                    padding: 20px 30px;
+                    border-radius: 15px;
+                    z-index: 10000;
+                    font-weight: bold;
+                    font-size: 16px;
+                    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.5);
+                    animation: slideInRight 0.4s ease, glow 2s infinite;
+                    border: 2px solid rgba(255, 255, 255, 0.3);
+                `;
+                alertDiv.textContent = message;
+                document.body.appendChild(alertDiv);
+                
+                setTimeout(() => {
+                    alertDiv.style.animation = 'fadeOut 0.5s ease';
+                    setTimeout(() => alertDiv.remove(), 500);
+                }, 3500);
+            }
+            
+            function validateInput(name) {
+                if (!name || name.trim().length < 2) {
+                    return { valid: false, error: "الاسم يجب أن يكون على الأقل حرفين 📝" };
+                }
+                if (name.length > 30) {
+                    return { valid: false, error: "الاسم طويل جداً (الحد الأقصى 30 حرف) 📏" };
+                }
+                return { valid: true };
+            }
+            
+            // FOX Security Shield
+            function initSecurity() {
+                if (isInitialized) return true;
+                
+                try {
+                    // حماية من النسخ
+                    document.addEventListener('copy', (e) => {
+                        e.preventDefault();
+                        showAlert('⚠️ يُمنع نسخ المحتوى - حقوق FOX IT محفوظة');
+                    });
+                    
+                    // حماية من الفحص
+                    document.addEventListener('contextmenu', (e) => {
+                        e.preventDefault();
+                        showAlert('⛔ نظام FOX IT محمي - حقوق تقنية محفوظة');
+                    });
+                    
+                    console.log(
+                        `%c🦊 FOX IT System v2.0\n` +
+                        `%cنظام تحفيزي خاص لطلاب تقنية المعلومات\n` +
+                        `%cجميع الحقوق محفوظة © 2024 FOX`,
+                        'color: #00d4ff; font-weight: bold; font-size: 16px;',
+                        'color: #66ccff; font-size: 14px;',
+                        'color: #ffffff; font-size: 12px;'
+                    );
+                    
+                    isInitialized = true;
+                    return true;
+                } catch (error) {
+                    console.error('FOX IT Security Error:', error);
+                    return false;
+                }
+            }
+            
+            // Public methods
+            return {
+                init: function() {
+                    if (!initSecurity()) {
+                        showAlert('⚠️ خطأ في نظام الحماية التقني');
+                        return;
+                    }
+                    
+                    // Initialize gender selector
+                    const genderSelect = document.getElementById("gender");
+                    if (genderSelect) {
+                        genderSelect.addEventListener("change", function() {
+                            const gender = this.value;
+                            const nameSection = document.getElementById("name-section");
+                            const messageDiv = document.getElementById("message");
+                            
+                            if (messageDiv) {
+                                messageDiv.textContent = "";
+                                messageDiv.style.opacity = 0;
+                            }
+                            
+                            if (gender) {
+                                nameSection.style.display = "block";
+                                setTimeout(() => {
+                                    nameSection.style.opacity = 1;
+                                }, 10);
+                                
+                                // إضافة تأثير للقسم
+                                nameSection.style.animation = 'fadeIn 0.8s ease';
+                            } else {
+                                nameSection.style.display = "none";
+                            }
+                        });
+                    }
+                    
+                    // Initialize button click
+                    const showMessageBtn = document.getElementById("show-message-btn");
+                    if (showMessageBtn) {
+                        showMessageBtn.addEventListener("click", () => this.showMessage());
+                    }
+                    
+                    // Enter key support
+                    const usernameInput = document.getElementById("username");
+                    if (usernameInput) {
+                        usernameInput.addEventListener("keypress", (e) => {
+                            if (e.key === "Enter") {
+                                this.showMessage();
+                            }
+                        });
+                    }
+                    
+                    // Focus على حقل الاسم عند الاختيار
+                    if (genderSelect && usernameInput) {
+                        genderSelect.addEventListener('change', function() {
+                            if (this.value) {
+                                setTimeout(() => {
+                                    usernameInput.focus();
+                                }, 300);
+                            }
+                        });
+                    }
+                    
+                    console.log('FOX IT System Initialized Successfully ✅');
+                },
+                
+                showMessage: function() {
+                    attemptCount++;
+                    
+                    if (attemptCount > MAX_ATTEMPTS) {
+                        showAlert('🎯 تم توليد ' + MAX_ATTEMPTS + ' رسائل تحفيزية! جرب مرة أخرى لاحقاً');
+                        return;
+                    }
+                    
+                    const gender = document.getElementById("gender").value;
+                    const nameInput = document.getElementById("username");
+                    const name = nameInput ? nameInput.value.trim() : '';
+                    const messageDiv = document.getElementById("message");
+                    
+                    if (!messageDiv) return;
+                    
+                    // التحقق من المدخلات
+                    const validation = validateInput(name);
+                    if (!validation.valid) {
+                        messageDiv.textContent = validation.error;
+                        messageDiv.style.color = '#ff9966';
+                        messageDiv.style.opacity = 1;
+                        messageDiv.style.animation = 'fadeInUp 0.5s ease forwards';
+                        return;
+                    }
+                    
+                    if (!gender) {
+                        messageDiv.textContent = "👈 الرجاء تحديد النوع أولاً";
+                        messageDiv.style.color = '#ffcc66';
+                        messageDiv.style.opacity = 1;
+                        messageDiv.style.animation = 'fadeInUp 0.5s ease forwards';
+                        return;
+                    }
+                    
+                    // توليد رسالة عشوائية
+                    const randomMessage = getRandomMessage(gender);
+                    const finalMessage = `${name}، ${randomMessage}`;
+                    
+                    // تحديد اللون حسب الجنس
+                    if (gender === "ذكر") {
+                        messageDiv.style.color = '#00d4ff';
+                        messageDiv.style.borderColor = 'rgba(0, 212, 255, 0.4)';
+                        messageDiv.style.background = 'linear-gradient(45deg, rgba(0, 150, 255, 0.2), rgba(0, 212, 255, 0.2))';
+                    } else if (gender === "أنثى") {
+                        messageDiv.style.color = '#ff66cc';
+                        messageDiv.style.borderColor = 'rgba(255, 102, 204, 0.4)';
+                        messageDiv.style.background = 'linear-gradient(45deg, rgba(255, 102, 204, 0.2), rgba(255, 153, 204, 0.2))';
+                    }
+                    
+                    // إظهار الرسالة مع تأثيرات
+                    messageDiv.textContent = finalMessage;
+                    messageDiv.classList.remove("motivational-message");
+                    
+                    // إعادة تشغيل الأنيميشن
+                    void messageDiv.offsetWidth;
+                    
+                    messageDiv.classList.add("motivational-message");
+                    messageDiv.style.opacity = 1;
+                    
+                    // تأثير زر
+                    const btn = document.getElementById("show-message-btn");
+                    if (btn) {
+                        btn.style.animation = "none";
+                        setTimeout(() => {
+                            btn.style.animation = "";
+                        }, 10);
+                        
+                        // تغيير نص الزر مؤقتاً
+                        const originalText = btn.textContent;
+                        btn.textContent = "🎉 تم التوليد! جرب مرة أخرى";
+                        btn.style.background = 'linear-gradient(45deg, #00cc66, #00ff99)';
+                        
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                            btn.style.background = 'linear-gradient(45deg, #0066ff, #00d4ff)';
+                        }, 2000);
+                    }
+                    
+                    // تسجيل الاستخدام
+                    console.log(`FOX IT Message #${attemptCount}: ${gender} - ${name}`);
+                },
+                
+                // معلومات النظام
+                getInfo: function() {
+                    return {
+                        version: "2.0",
+                        copyright: "FOX IT © 2024",
+                        messages: {
+                            male: maleITMessages.length,
+                            female: femaleITMessages.length
+                        },
+                        status: "Active & Protected"
+                    };
+                }
+            };
+        })();
+
+        // Initialize FOX System when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            FOX.init();
+            
+            // منع مفاتيح التطوير
+            document.addEventListener('keydown', function(e) {
+                if (
+                    e.key === 'F12' ||
+                    (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                    (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+                    (e.ctrlKey && e.key === 'u')
+                ) {
+                    e.preventDefault();
+                    FOX.showAlert('🛡️ نظام FOX IT محمي - غير مسموح');
+                }
+            });
+        });
+
+        // حماية إضافية
+        Object.freeze(FOX);
+        
+        // جعل FOX غير قابل للتعديل
+        Object.defineProperty(window, 'FOX', {
+            value: FOX,
+            writable: false,
+            configurable: false,
+            enumerable: false
+        });
+        
+        // إضافة معلومات للنظام
+        console.log('🦊 FOX IT Motivator Loaded');
+        console.log('📊 System Info:', FOX.getInfo());
+    </script>
+    
+    <!-- 
+        ╔══════════════════════════════════════════╗
+        ║    FOX IT Motivator v2.0                 ║
+        ║    خاص لطلاب تقنية المعلومات            ║
+        ║    © 2025 - جميع الحقوق محفوظة          ║
+        ╚══════════════════════════════════════════╝
+    -->
+</body>
+</html>
