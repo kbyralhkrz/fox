@@ -1,4 +1,4 @@
-غ<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
@@ -444,38 +444,7 @@
                 "💖 شغفكِ بالتقنية هو الـ Compiler الذي يحول الأفكار لواقع!",
                 "👑 أنتِ الـ Tech Queen، ملكة عالم التقنية والإبداع!"
             ];
-
-
-
-                        
-    // ✅✅✅ الشرط الخاص لأفكار (يجب أن يكون أنثى + الاسم أفكار) ✅✅✅
-    const isAfkar = (
-        gender === "أنثى" && 
-        (name === "افكار" || 
-         name === "أفكار" || 
-         name === "afkar" ||
-         name.includes("افكار") ||
-         name.includes("أفكار"))
-    );
-
-    // إذا كانت أفكار
-    if (isAfkar) {
-        // رسائل خاصة لأفكار فقط
-        const afkarMessages = [
-            "👑 أستاذتنا الغالية أفكار، أنتِ مصدر الإلهام والنور في طريقنا!",
-            "💎 أفكارنا، شكراً على كل جهد تبذلينه من أجلنا!",
-            "✨ أفكار، اسم على مسمى! أنتِ كنز ثمين لا يُعوّض!",
-            "🌸 إلى من علمتنا معنى التفوق: أستاذتنا أفكار، لكِ كل الحب والتقدير!"
-        ];
-        
-        const randomMessage = afkarMessages[Math.floor(Math.random() * afkarMessages.length)];
-        messageDiv.textContent = randomMessage;
-        messageDiv.style.color = '#ff1493';
-        messageDiv.style.fontSize = '26px';
-        messageDiv.style.fontWeight = 'bold';
-
-
-        else {
+            
             // Helper functions
             function getRandomMessage(gender) {
                 if (gender === "ذكر") {
@@ -511,9 +480,7 @@
                     setTimeout(() => alertDiv.remove(), 500);
                 }, 3500);
             }
-
-        }
-        
+            
             function validateInput(name) {
                 if (!name || name.trim().length < 2) {
                     return { valid: false, error: "الاسم يجب أن يكون على الأقل حرفين 📝" };
@@ -657,18 +624,45 @@
                     }
                     
                     // توليد رسالة عشوائية
-                    const randomMessage = getRandomMessage(gender);
-                    const finalMessage = `${name}، ${randomMessage}`;
-                    
-                    // تحديد اللون حسب الجنس
-                    if (gender === "ذكر") {
-                        messageDiv.style.color = '#00d4ff';
-                        messageDiv.style.borderColor = 'rgba(0, 212, 255, 0.4)';
-                        messageDiv.style.background = 'linear-gradient(45deg, rgba(0, 150, 255, 0.2), rgba(0, 212, 255, 0.2))';
-                    } else if (gender === "أنثى") {
-                        messageDiv.style.color = '#ff66cc';
-                        messageDiv.style.borderColor = 'rgba(255, 102, 204, 0.4)';
-                        messageDiv.style.background = 'linear-gradient(45deg, rgba(255, 102, 204, 0.2), rgba(255, 153, 204, 0.2))';
+                    let finalMessage = "";
+
+                    // التحقق إذا كان الاسم هو "أفكار"
+                    if (name.toLowerCase() === "افكار" , "أفكار" , "afkar" , "Afkar") {
+                        // رسائل خاصة للدكتورة أفكار
+                        const afkarMessages = [
+                            "🌟 دكتورة أفكار، أنتِ مصدر الإلهام لكل طلبة التقنية!",
+                            "💎 جهودكِ هي الـ Framework الذي يبني أجيالاً من المبرمجين المتميزين",
+                            "🚀 شكراً لأنكِ تزرعين حب البرمجة في قلوب الطلاب",
+                            "🎯 أفكاركِ هي الـ Algorithm الأكثر كفاءة لنجاح طلابك",
+                            "❤️ أنتِ الـ Compiler الذي يحول طموحات الطلاب إلى واقع ملموس",
+                            "🌐 دكتورة أفكار، أنتِ الـ Server الذي يدعم مسيرة طلاب التقنية",
+                            "✨ إبداعكِ في التدريس هو أقوى لغة برمجة نتعلمها منكِ",
+                            "🏆 طلابكِ هم أفضل دليل على تميزكِ الأكاديمي والتربوي"
+                        ];
+                        
+                        const randomAfkarMessage = afkarMessages[Math.floor(Math.random() * afkarMessages.length)];
+                        finalMessage = randomAfkarMessage;
+                        
+                        // تنسيق خاص للدكتورة أفكار
+                        messageDiv.style.color = '#ffcc00';
+                        messageDiv.style.borderColor = 'rgba(255, 204, 0, 0.5)';
+                        messageDiv.style.background = 'linear-gradient(45deg, rgba(255, 215, 0, 0.2), rgba(255, 204, 0, 0.2))';
+                        messageDiv.style.textShadow = '0 0 20px rgba(255, 204, 0, 0.5)';
+                    } else {
+                        // رسائل عادية للطلاب
+                        const randomMessage = getRandomMessage(gender);
+                        finalMessage = `${name}، ${randomMessage}`;
+                        
+                        // تحديد اللون حسب الجنس
+                        if (gender === "ذكر") {
+                            messageDiv.style.color = '#00d4ff';
+                            messageDiv.style.borderColor = 'rgba(0, 212, 255, 0.4)';
+                            messageDiv.style.background = 'linear-gradient(45deg, rgba(0, 150, 255, 0.2), rgba(0, 212, 255, 0.2))';
+                        } else if (gender === "أنثى") {
+                            messageDiv.style.color = '#ff66cc';
+                            messageDiv.style.borderColor = 'rgba(255, 102, 204, 0.4)';
+                            messageDiv.style.background = 'linear-gradient(45deg, rgba(255, 102, 204, 0.2), rgba(255, 153, 204, 0.2))';
+                        }
                     }
                     
                     // إظهار الرسالة مع تأثيرات
